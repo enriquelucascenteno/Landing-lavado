@@ -8,12 +8,24 @@
     .top-bar {
   display: flex;
   align-items: center;
+  justify-content: center; /* centra todo */
   background-color: #121212;
   padding: 0.5rem 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #00bfa6;
+}
+
+.top-bar img {
+  height: 60px; /* aumentamos el tamaño */
+  margin-right: 12px;
+}
+
+.logo-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00bfa6;
 }
 
 .top-bar img {
@@ -249,7 +261,7 @@ footer {
 <body>  
 <div class="top-bar">
   <img src="freshcleanlogo.png" alt="Fresh Clean Logo">
-  <span>Fresh Clean</span>
+  <span class="logo-title">Fresh Clean</span>
 </div>
 
   <header>
