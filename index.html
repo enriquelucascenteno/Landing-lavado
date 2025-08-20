@@ -266,14 +266,67 @@ footer {
   width: 24px;
   height: 24px;
 }
+.menu-icon {
+  font-size: 2rem;
+  color: #00bfa6;
+  cursor: pointer;
+  display: none;
+}
+
+/* Menú móvil oculto por defecto */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #121212;
+  padding: 1rem;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 200px;
+  border-left: 1px solid #00bfa6;
+  border-bottom: 1px solid #00bfa6;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.mobile-menu a:hover {
+  color: #00bfa6;
+}
+
+/* Solo mostrar el ícono de menú en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .top-bar {
+    justify-content: space-between;
+  }
+}
 </style>
 </head>
 <body>  
 <div class="top-bar">
+  <div class="top-bar">
   <div class="logo-container">
-    <img src="nuevofresh.png">
+    <img src="freshcleanlogo.png" alt="Fresh Clean Logo">
     <span class="logo-title">Fresh Clean</span>
   </div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</div>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#contacto">Solicitá presupuesto</a>
+  <a href="#gallery">Galería</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#contacto">Contacto</a>
+</nav>
   <div class="menu-icon">
     &#9776;
   </div>
@@ -462,5 +515,16 @@ footer {
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   Chatea con nosotros
 </a>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu.style.display === 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  }
+</script>
+
 </body>
 </html>
