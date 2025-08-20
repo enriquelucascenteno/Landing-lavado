@@ -266,10 +266,51 @@ footer {
   width: 24px;
   height: 24px;
 }
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* oculto a la derecha */
+  width: 250px;
+  height: 100%;
+  background-color: #121212;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: right 0.3s ease;
+  z-index: 1100;
+}
+
+/* Cuando esté activo (clase 'active'), el menú se desliza dentro */
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu a {
+  color: #00bfa6;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.mobile-menu a:hover {
+  color: #ffffff;
+}
+
+/* Mostrar solo menú hamburguesa en móvil */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>  
-  
+
   <div class="top-bar">
     <div class="logo-container">
       <img src="freshcleanlogo.png" alt="Fresh Clean Logo" />
