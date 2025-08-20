@@ -342,5 +342,25 @@ footer {
   <footer>
     <p>&copy; 2025 Lavado y Desinfección | Servicio Profesional</p>
   </footer>
+<script>
+  // Testimonio carrusel automático
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.testimonio-carousel .carousel-container');
+    let scrollAmount = 0;
+    const scrollStep = container.offsetWidth * 0.8; // mueve una tarjeta a la vez
+
+    setInterval(() => {
+      if (scrollAmount + scrollStep >= container.scrollWidth) {
+        scrollAmount = 0;
+      } else {
+        scrollAmount += scrollStep;
+      }
+      container.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }, 5000); // cada 5 segundos
+  });
+</script>
 </body>
 </html>
