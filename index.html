@@ -266,63 +266,18 @@ footer {
   width: 24px;
   height: 24px;
 }
-
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -250px; /* oculto a la derecha */
-  width: 250px;
-  height: 100%;
-  background-color: #121212;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition: right 0.3s ease;
-  z-index: 1100;
-}
-
-/* Cuando esté activo (clase 'active'), el menú se desliza dentro */
-.mobile-menu.active {
-  right: 0;
-}
-
-.mobile-menu a {
-  color: #00bfa6;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.mobile-menu a:hover {
-  color: #ffffff;
-}
-
-/* Mostrar solo menú hamburguesa en móvil */
-@media (min-width: 769px) {
-  .menu-icon {
-    display: none;
-  }
-  .mobile-menu {
-    display: none;
-  }
-}
 </style>
 </head>
 <body>  
-
-  <div class="top-bar">
-    <div class="logo-container">
-      <img src="freshcleanlogo.png" alt="Fresh Clean Logo" />
-      <span class="logo-title">Fresh Clean</span>
-    </div>
-    <div class="menu-icon">☰</div>
+<div class="top-bar">
+  <div class="logo-container">
+    <img src="nuevofresh.png">
+    <span class="logo-title">Fresh Clean</span>
   </div>
-  <nav class="mobile-menu">
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <div class="menu-icon">
+    &#9776;
+  </div>
+</div>
 
   <header>
     <h1>Dile adiós a las alergias y malos olores: limpieza profesional, sin esfuerzo</h1>
@@ -507,15 +462,5 @@ footer {
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   Chatea con nosotros
 </a>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.querySelector('.menu-icon');
-    const mobileMenu = document.querySelector('.mobile-menu');
-
-    menuIcon.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-    });
-  });
-</script>
 </body>
 </html>
