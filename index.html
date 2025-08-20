@@ -1,181 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lavado y Desinfección a Domicilio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #1f1f1f;
-      color: #f0f0f0;
-    }
-    header {
-      background-image: url('Nueva portada.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #ffffff;
-      padding: 6rem 1rem;
-      text-align: center;
-      position: relative;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
-    header h1, header p, header a {
-      position: relative;
-      z-index: 1;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #00bfa6;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 1rem;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: #00a490;
-    }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .service {
-      background: #2a2a2a;
-      padding: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      width: 220px;
-      text-align: center;
-      color: #fff;
-    }
-    footer {
-      background: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    /* Carrusel */
-    .carousel-container {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      gap: 1rem;
-      padding: 1rem 0;
-      scroll-behavior: smooth;
-      background-color: #2c3e50;
-      max-width: 800px;
-      margin: 0 auto;
-      border-radius: 8px;
-    }
-    .carousel-container::-webkit-scrollbar {
-      height: 8px;
-    }
-    .carousel-container::-webkit-scrollbar-thumb {
-      background: #00bfa6;
-      border-radius: 4px;
-    }
-    .carousel-item {
-      flex: 0 0 80%;
-      scroll-snap-align: center;
-      display: flex;
-      justify-content: center;
-      background: transparent;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    @media (min-width: 900px) {
-      .carousel-item {
-        flex: 0 0 400px;
-      }
-    }
-    .carousel-item img {
-      width: 100%;
-      max-width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    .service-slider {
-      width: 100%;
-      max-width: 200px;
-      height: 150px;
-      display: block;
-      margin: 0 auto 1rem auto;
-      border-radius: 8px;
-      object-fit: cover;
-      object-position: center;
-    }
-    .service h3 {
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-      color: #00bfa6;
-      font-weight: bold;
-    }
-    .image-wrapper {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      max-width: 200px;
-      margin: 0 auto 1rem auto;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .image-wrapper img.service-slider {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-    .image-wrapper .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.2);
-      pointer-events: none;
-      border-radius: 8px;
-    }
-    .testimonio-carousel {
-      margin-top: 2rem;
-      background-color: #2a2a2a;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    .testimonial-box {
-      background: #1f1f1f;
-      padding: 1rem;
-      border-radius: 8px;
-      color: #f0f0f0;
-      max-width: 400px;
-      margin: auto;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-  </style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #1f1f1f;
+  color: #f0f0f0;
+}
+
+header {
+  background-image: url('Nueva portada.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 6rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+header h1,
+header p,
+header a {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #00bfa6;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #00a490;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.service {
+  background: #2a2a2a;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 220px;
+  text-align: center;
+  color: #ffffff;
+}
+
+footer {
+  background: #111;
+  color: #cccccc;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Carrusel */
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  background-color: #2c3e50;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #00bfa6;
+  border-radius: 4px;
+}
+
+.carousel-item {
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+@media (min-width: 900px) {
+  .carousel-item {
+    flex: 0 0 400px;
+  }
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.service-slider {
+  width: 100%;
+  max-width: 200px;
+  height: 150px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+.service h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #00bfa6;
+  font-weight: bold;
+}
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 1rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-wrapper img.service-slider {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.image-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Fondo oscuro semitransparente */
+  pointer-events: none;
+  border-radius: 8px;
+}
+.testimonio-carousel {
+  margin-top: 2rem;
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.testimonial-box {
+  background: #1f1f1f;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #f0f0f0;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+</style>
 </head>
 <body>
+
   <header>
     <h1>Dile adiós a las alergias y malos olores: limpieza profesional, sin esfuerzo</h1>
     <p>Productos biodegradables, desinfección a vapor y secado completo — servicio a domicilio con movilidad gratis</p>
@@ -188,7 +213,7 @@
       <div class="service">
         <h3>🛋️ Muebles</h3>
         <div class="image-wrapper">
-           <img class="service-slider" src="mueble fijo 2.jpg" alt="mueble" />
+           <img class="service-slider" src="mueble fijo 2.jpg" alt="mueble">
            <div class="overlay"></div>
          </div>
         <p>Eliminamos manchas, olores, ácaros y suciedad acumulada en sofás, sillones y sillas tapizadas. Ideal para casas con mascotas o niños.</p>
@@ -196,7 +221,7 @@
       <div class="service">
         <h3>🛏️ Colchones</h3>
         <div class="image-wrapper">
-          <img class="service-slider" src="colchon fijo.jpg" alt="colchon" />
+          <img class="service-slider" src="colchon fijo.jpg" alt="colchon">
           <div class="overlay"></div>
         </div>
         <p>Desinfección profunda contra ácaros, bacterias y manchas. Incluye secado al 100%. Apto para personas alérgicas.</p>
@@ -204,7 +229,7 @@
       <div class="service">
         <h3>🧼 Alfombras</h3>
        <div class="image-wrapper">
-          <img class="service-slider" src="alfombra fijo 2.jpg" alt="alfombra" />
+          <img class="service-slider" src="alfombra fijo 2.jpg" alt="alfombra">
           <div class="overlay"></div>
         </div>
         <p>Limpieza a vapor sin dañar las fibras. Restauramos el color y eliminamos olores impregnados.</p>
@@ -212,7 +237,7 @@
       <div class="service">
         <h3>🪑 Sillas</h3>
         <div class="image-wrapper">
-          <img class="service-slider" src="silla fijo.jpg" alt="silla" />
+          <img class="service-slider" src="silla fijo.jpg" alt="silla">
           <div class="overlay"></div>
         </div>
         <p>Sillas de comedor, oficina o bar. Tratamiento anti-ácaros y eliminación de suciedad por uso diario.</p>
@@ -220,7 +245,7 @@
       <div class="service">
         <h3>🧽 Rollers</h3>
          <div class="image-wrapper">
-          <img class="service-slider" src="roller fijo 3.jpg" alt="roller" />
+          <img class="service-slider" src="roller fijo 3.jpg" alt="roller">
           <div class="overlay"></div>
          </div>
         <p>Limpieza en seco o con vapor, sin desmontar. Eliminamos polvo, manchas y residuos del aire..</p>
@@ -229,14 +254,131 @@
   </section>
 
   <section class="gallery">
-    <h2>Antes y Después</h2>
-    <div class="carousel-container" id="carousel-photos">
-      <div class="carousel-item">
-        <img src="ANTES 1.jpg" alt="Antes 1" />
+  <h2>Antes y Después</h2>
+  <div class="carousel-container">
+    <div class="carousel-item">
+      <img src="ANTES 1.jpg" alt="Antes 1">
+    </div>
+    <div class="carousel-item">
+      <img src="DESPUES 1.jpg" alt="Después 1">
+    </div>
+    <div class="carousel-item">
+      <img src="ANTES 2.jpg" alt="Antes 2">
+    </div>
+    <div class="carousel-item">
+      <img src="DESPUES 2.jpg" alt="Después 2">
+    </div>
+    <div class="carousel-item">
+      <img src="ANTES 3.jpg" alt="Antes 3">
+    </div>
+    <div class="carousel-item">
+      <img src="DESPUES 3.jpg" alt="Después 3">
+    </div>
+    <div class="carousel-item">
+      <img src="ANTES 4.jpeg" alt="Antes 4">
+    </div>
+    <div class="carousel-item">
+      <img src="DESPUES 4.jpeg" alt="Después 4">
+    </div>
+  </div>
+  <div class="testimonio-carousel">
+  <h3 style="text-align: center; color: #00bfa6;">Lo que dicen nuestros clientes</h3>
+  <div class="carousel-container">
+    <div class="carousel-item">
+      <div class="testimonial-box">
+        <p>“Pensé que tendría que tirar el sillón, pero quedó como nuevo. ¡Gracias por el excelente trabajo!”</p>
+        <p style="color: gold;">★★★★★</p>
+        <strong>- Carla G., 📍 San Borja</strong>
       </div>
-      <div class="carousel-item">
-        <img src="DESPUES 1
+    </div>
+    <div class="carousel-item">
+      <div class="testimonial-box">
+        <p>“Muy puntuales, atentos y el colchón quedó impecable y completamente seco. 10/10.”</p>
+        <p style="color: gold;">★★★★★</p>
+        <strong>- Diego R., 📍 Surco</strong>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="testimonial-box">
+        <p>“Me encantó el servicio, ya no hay olores en mi alfombra. ¡Volveré a llamar seguro!”</p>
+        <p style="color: gold;">★★★★★</p>
+        <strong>- Mariana P., 📍 Miraflores</strong>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="testimonial-box">
+        <p>“Muy profesionales, dejaron mis rollers impecables y sin necesidad de desmontarlos.”</p>
+        <p style="color: gold;">★★★★★</p>
+        <strong>- José L., 📍 Magdalena</strong>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="testimonial-box">
+        <p>“Excelente atención. Vinieron a la hora acordada y dejaron todo limpio y seco.”</p>
+        <p style="color: gold;">★★★★★</p>
+        <strong>- Fiorella M., 📍 Pueblo Libre</strong>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+  <section>
+    <h2>¿Por qué elegirnos?</h2>
+    <ul>
+      <li>✅ SERVICIO A DOMICILIO O EMPRESA</li>
+      <li>✅ SECADO COMPLETO AL 100%</li>
+      <li>✅ MAQUINARIA INDUSTRIAL</li>
+      <li>✅ PERSONAL CAPACITADO</li>
+      <li>✅ DELIVERY GRATIS</li>
+    </ul>
+  </section>
 
+  <section id="contacto">
+    <h2>Solicitá tu presupuesto</h2>
+    <p>Envíanos un mensaje por WhatsApp y te respondemos al instante:</p>
+    <a href="https://wa.me/51960820055?text=Hola%2C+quiero+cotizar+un+servicio+de+limpieza" class="btn">Contactar por WhatsApp</a>
+  </section>
 
-Preguntar a ChatGPT
+  <footer>
+    <p>&copy; 2025 Lavado y Desinfección | Servicio Profesional</p>
+  </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryContainer = document.querySelector('section.gallery > .carousel-container');
+    const testimonialContainer = document.querySelector('.testimonio-carousel .carousel-container');
 
+    let scrollIndex = 0;
+
+    // Suponemos que ambos tienen la misma cantidad de items
+    const itemsCount = galleryContainer.querySelectorAll('.carousel-item').length / 2; 
+    // Dividimos entre 2 porque la galería tiene pares "antes y después"
+
+    const scrollStepGallery = galleryContainer.offsetWidth * 0.8;
+    const scrollStepTestimonial = testimonialContainer.offsetWidth * 0.8;
+
+    setInterval(() => {
+      // Mover índice al siguiente item
+      scrollIndex++;
+      if (scrollIndex >= itemsCount) {
+        scrollIndex = 0;
+      }
+
+      // Calcular posición scroll para galería (cada "item" tiene un ancho del 80% del contenedor)
+      const scrollPosGallery = scrollIndex * scrollStepGallery;
+      galleryContainer.scrollTo({
+        left: scrollPosGallery,
+        behavior: 'smooth'
+      });
+
+      // Para testimonios
+      const scrollPosTestimonial = scrollIndex * scrollStepTestimonial;
+      testimonialContainer.scrollTo({
+        left: scrollPosTestimonial,
+        behavior: 'smooth'
+      });
+
+    }, 5000);
+  });
+</script>
+</body>
+</html>
