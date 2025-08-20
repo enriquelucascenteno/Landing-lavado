@@ -197,6 +197,32 @@ footer {
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebd5a;
+}
+
+.whatsapp-button img {
+  width: 24px;
+  height: 24px;
+}
 </style>
 </head>
 <body>
@@ -380,5 +406,9 @@ footer {
     }, 5000);
   });
 </script>
+<a href="https://wa.me/51960820055?text=Hola%2C+quiero+cotizar+un+servicio+de+limpieza" class="whatsapp-button" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  Chatea con nosotros
+</a>
 </body>
 </html>
