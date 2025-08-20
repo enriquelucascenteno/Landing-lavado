@@ -8,9 +8,9 @@
     .top-bar {
   display: flex;
   align-items: center;
-  justify-content: center; /* centra todo */
+  justify-content: space-between; /* separa logo e ícono */
   background-color: #121212;
-  padding: 0.5rem 2rem;  /*para mover el logo a los lados*/
+  padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -260,8 +260,13 @@ footer {
 </head>
 <body>  
 <div class="top-bar">
-  <img src="freshcleanlogo.png" alt="Fresh Clean Logo">
-  <span class="logo-title">Fresh Clean</span>
+  <div class="logo-container">
+    <img src="freshcleanlogo.png" alt="Fresh Clean Logo">
+    <span class="logo-title">Fresh Clean</span>
+  </div>
+  <div class="menu-icon">
+    &#9776;
+  </div>
 </div>
 
   <header>
