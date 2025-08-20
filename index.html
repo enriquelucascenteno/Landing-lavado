@@ -285,21 +285,6 @@ footer {
   <footer>
     <p>&copy; 2025 Lavado y Desinfección | Servicio Profesional</p>
   </footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const sliders = document.querySelectorAll('.service-slider');
-
-    sliders.forEach(slider => {
-      const images = slider.getAttribute('data-images').split(',');
-      let index = 0;
-
-      setInterval(() => {
-        index = (index + 1) % images.length;
-        slider.src = images[index];
-      }, 3000); // Cambia cada 1 segundo
-    });
-  });
 </script>
 </body>
 </html>
