@@ -151,18 +151,38 @@ footer {
     <div class="services">
       <div class="service">
         <h3>🛋️ Muebles</h3>
+        <img 
+        class="service-slider" 
+        src="muebles 1.png" 
+        data-images="muebles 1.png,muebles 2.png,muebles 3.png,muebles 5.png,muebles 6.png" 
+        alt="Muebles">
         <p>Eliminamos manchas, olores, ácaros y suciedad acumulada en sofás, sillones y sillas tapizadas. Ideal para casas con mascotas o niños.</p>
       </div>
       <div class="service">
         <h3>🛏️ Colchones</h3>
+        <img 
+        class="service-slider" 
+        src="colchones 1.png" 
+        data-images="colchones 1.png,colchones 2.png,colchones 3.png,colchones 4.png,colchones 5.png" 
+        alt="Colchones">
         <p>Desinfección profunda contra ácaros, bacterias y manchas. Incluye secado al 100%. Apto para personas alérgicas.</p>
       </div>
       <div class="service">
         <h3>🧼 Alfombras</h3>
+        <img
+        class="service-slider" 
+        src="alfombra 1.png" 
+        data-images="alfombra 1.png" 
+        alt="alfombras">
         <p>Limpieza a vapor sin dañar las fibras. Restauramos el color y eliminamos olores impregnados.</p>
       </div>
       <div class="service">
         <h3>🪑 Sillas</h3>
+        <img 
+        class="service-slider" 
+        src="sillas 1.png" 
+        data-images="sillas 1.png,sillas 2.png,sillas 3.png,sillas 4.png,sillas 5.png" 
+        alt="Colchones">
         <p>Sillas de comedor, oficina o bar. Tratamiento anti-ácaros y eliminación de suciedad por uso diario.</p>
       </div>
       <div class="service">
@@ -222,5 +242,20 @@ footer {
     <p>&copy; 2025 Lavado y Desinfección | Servicio Profesional</p>
   </footer>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sliders = document.querySelectorAll('.service-slider');
+
+    sliders.forEach(slider => {
+      const images = slider.getAttribute('data-images').split(',');
+      let index = 0;
+
+      setInterval(() => {
+        index = (index + 1) % images.length;
+        slider.src = images[index];
+      }, 1000); // Cambia cada 1 segundo
+    });
+  });
+</script>
 </body>
 </html>
